@@ -21,6 +21,10 @@ public:
 	}
 
 	int pop() {
+		if(top == NULL) {
+			return -1;
+		} 
+		
 		Node *temp = top;
 		int data = top -> data;
 
@@ -42,5 +46,10 @@ int main() {
 	cout << stack -> pop() << endl;
 	cout << stack -> pop() << endl;
 	cout << stack -> pop() << endl;
+	int data = stack -> pop();
+	if(data != -1)
+		cout << data << endl;
+	else 
+		cout << "Underflow" << endl;
 }
 
